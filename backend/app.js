@@ -13,6 +13,7 @@ connectdb();
 app.use("/users", UserRouter);
 app.use("/sellers", protect , require("../Routes/sellersRoutes"));
 app.use("/buyers", protect , require("../Routes/buyersRoute"));
+
 app.listen(5000, () => {
   console.log("Server is running on port 5000");
 });
